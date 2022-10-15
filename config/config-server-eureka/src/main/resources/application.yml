@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/Baios/config-repo.git
+          username: 381354120@qq.com
+          password: 'baios122'
+          # 如果有子目录的时候需要
+          # search-paths: abc, def*
+          # 强制拉取资源文件
+          force-pull: true
+
+server:
+  port: 60001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
